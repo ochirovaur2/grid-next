@@ -1,0 +1,30 @@
+.story{
+	////////////////
+	// Photos
+	&__pictures{
+		background: linear-gradient(
+			        rgba($color-primary, .5), 
+			        rgba($color-primary, .5) ),
+		            url("../img/back.jpg");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	&__img-1{
+		width: 100%;
+        grid-row: 2 / 6;
+        grid-column: 2 / 6; 
+	}
+	&__img-2{
+		width: 115%;
+        grid-row: 4 / 6;
+        grid-column: 4 / 7;
+        z-index: 20;
+	}
+	/////////////////
+	//Text
+	&__text{
+		
+	}
+	
+}

@@ -1,0 +1,36 @@
+.realtors{
+	padding: 3rem;
+	background: $color-secondary;
+	////////////////
+	/// Top
+	&__top{
+		
+	}
+	////////////////
+	/// Person
+	&__person{
+		padding: 1rem 0;
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		align-items: center;
+		justify-items: center;
+		grid-column-gap: 1rem;
+		
+	}
+	&__img{
+		max-width: 7rem;
+		max-height: 100%;
+		border-radius: 50%;
+		display: block;
+	}
+	//////////////////////////
+	//// Text
+
+	&__text{
+		justify-self: start;
+	}
+	&__stat{
+		text-transform: uppercase;
+    	margin-top: -3px;
+	}
+}

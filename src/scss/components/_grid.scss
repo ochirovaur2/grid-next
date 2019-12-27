@@ -1,0 +1,82 @@
+.grid-container{
+	display: grid;
+	grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+	grid-template-rows: 80vh min-content min-content repeat(3, min-content);
+	// grid-template-areas: "sidebar header realtors"  
+ //                       	 "sidebar features features"  
+ //                       	 "sidebar story story"
+ //                       	 "sidebar homes homes"
+ //                       	 "sidebar gallery gallery"
+ //                       	 "sidebar footer footer";
+}
+.sidebar{
+	grid-column: sidebar-start / sidebar-end;
+	grid-row: 1 / -1;
+}
+
+.header{
+	grid-column: full-start / col-end 6;
+	grid-row: 1 / 2;
+
+	//////////////////////////////////
+	// Internal grid
+	display: grid;
+	grid-template-rows: 1fr min-content minmax(min-content, 1fr) min-content;
+	grid-gap: 2rem;
+	grid-template-columns: minmax(min-content, max-content);
+}	
+
+.realtors{
+	grid-column: col-start 7 / full-end;
+	grid-row: 1 / 2;
+
+	//////////////////////
+	// Internal grid
+	display: grid;
+	grid-template-rows: repeat(2, min-content);
+	grid-row-gap: 2rem;
+	justify-items: center;
+	align-items: center;
+	align-content: center;
+}
+
+.features{
+	grid-column: center-start / center-end;
+
+	/////////////////
+	// Internal grid
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	align-items: start;
+	grid-template-rows: repeat(2, 1fr);
+	grid-gap: 6rem;
+}
+
+.story{
+	grid-column: full-start / full-end;
+
+	display: grid;
+	grid-template-columns: repeat(2, minmax(min-content, 50%) );
+	&__pictures{
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: repeat(6, 1fr);
+		align-items: center;
+	}
+	&__text{
+		
+	}
+	
+}
+
+.homes{
+	background: yellow;
+}
+
+.gallery{
+	background: orange;
+}
+
+.footer{
+	background: green;
+}
