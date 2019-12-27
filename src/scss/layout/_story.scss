@@ -16,7 +16,7 @@
         grid-column: 2 / 6; 
 	}
 	&__img-2{
-		width: 115%;
+		width: 100%;
         grid-row: 4 / 6;
         grid-column: 4 / 7;
         z-index: 20;
@@ -24,7 +24,8 @@
 	/////////////////
 	//Text
 	&__text{
-		
+		background: $color-grey-light-1;
+		padding: 6rem 8vw;
 	}
 	
 }
