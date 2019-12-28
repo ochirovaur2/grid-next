@@ -72,11 +72,26 @@
 }
 
 .homes{
-	background: yellow;
+	grid-column: center-start / center-end;
+
+	/////////////////
+	// Internal grid
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	grid-template-rows: repeat(2, 1fr);
+	grid-gap: 6rem;
 }
 
 .gallery{
-	background: orange;
+	
+	grid-column: full-start / full-end;
+
+	/////////////////
+	// Internal grid
+	display: grid;
+	grid-template: repeat(7, 5vw)/repeat(8, 1fr);
+	grid-gap: 1.5rem;
+    
 }
 
 .footer{
