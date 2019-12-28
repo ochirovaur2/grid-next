@@ -1,16 +1,17 @@
 .grid-container{
 	display: grid;
+	width: 100vw;
 	grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-	grid-template-rows: 80vh min-content min-content repeat(3, min-content);
+	grid-template-rows: 80vh;
 	
 	@media only screen and (max-width: $bp-large) {
         grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-		grid-template-rows: 6rem 80vh min-content min-content repeat(3, min-content);
+		grid-template-rows: 6rem 80vh;
     }
 
     @media only screen and (max-width: $bp-medium) {
         grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-		grid-template-rows: 6rem minmax(50vh, min-content) min-content min-content min-content repeat(3, min-content);
+		grid-template-rows: 6rem minmax(50vh, min-content);
     }
 }
 .sidebar{
@@ -66,9 +67,8 @@
 
 .story{
 	grid-column: full-start / full-end;
-
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr) );
+	grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr) );
 	&__pictures{
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);
