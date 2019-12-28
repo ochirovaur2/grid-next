@@ -2,32 +2,45 @@
 	display: grid;
 	grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 	grid-template-rows: 80vh min-content min-content repeat(3, min-content);
-	// grid-template-areas: "sidebar header realtors"  
- //                       	 "sidebar features features"  
- //                       	 "sidebar story story"
- //                       	 "sidebar homes homes"
- //                       	 "sidebar gallery gallery"
- //                       	 "sidebar footer footer";
+	
+	@media only screen and (max-width: $bp-large) {
+        grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+		grid-template-rows: 6rem 80vh min-content min-content repeat(3, min-content);
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+		grid-template-rows: 6rem minmax(50vh, min-content) min-content min-content min-content repeat(3, min-content);
+    }
 }
 .sidebar{
 	grid-column: sidebar-start / sidebar-end;
-
+	@media only screen and (max-width: $bp-large) {
+        grid-row: 1 / 2;
+        grid-column: 1 / -1;
+    }
 }
 
 .header{
 	grid-column: full-start / col-end 6;
 
+	@media only screen and (max-width: $bp-large) {
+        grid-column: 1 / -1;
+    }
 	//////////////////////////////////
 	// Internal grid
 	display: grid;
 	grid-template-rows: 1fr min-content minmax(min-content, 1fr) min-content;
 	grid-gap: 2rem;
 	grid-template-columns: minmax(min-content, max-content);
+	
 }	
 
 .realtors{
 	grid-column: col-start 7 / full-end;
-	grid-row: 1 / 2;
+	@media only screen and (max-width: $bp-large) {
+        grid-column: 1 / -1;
+    }
 
 	//////////////////////
 	// Internal grid

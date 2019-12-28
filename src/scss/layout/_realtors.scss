@@ -4,7 +4,14 @@
 	////////////////
 	/// Top
 	&__top{
-		
+		@media only screen and (max-width: $bp-large) {
+	        display: flex;
+	        justify-content: space-between;
+	        align-items: center;
+	    }
+	    @media only screen and (max-width: $bp-small) {
+	        flex-direction: column;
+	    }
 	}
 	////////////////
 	/// Person
